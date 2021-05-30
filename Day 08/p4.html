@@ -1,0 +1,65 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+
+    google.charts.load("current", {packages:['corechart']});
+
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+
+        ["Element", "득표수", { role: "style" } ],
+
+        ["블랙핑크", 22.3, "#f59de9"],
+
+        ["아이유", 13.6, "#f2efb8"],
+
+        ["지코", 9.8, "#968374"],
+
+        ["오마이걸", 9.6, "#030303"]
+
+      ]);
+
+ 
+
+      var view = new google.visualization.DataView(data);
+
+      view.setColumns([0, 1,
+
+                       { calc: "stringify",
+
+                         sourceColumn: 1,
+
+                         type: "string",
+
+                         role: "annotation" },
+
+                       2]);
+
+ 
+
+      var options = {
+
+        title: "한국 아이돌 인기 순위",
+
+        width: 800,
+
+        height: 600,
+
+        bar: {groupWidth: "95%"},
+
+        legend: { position: "right" },
+
+      };
+
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+
+      chart.draw(view, options);
+
+  }
+
+  </script>
+
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>

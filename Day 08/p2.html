@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['넥슨',     31.3],
+          ['넷마블',      24.8],
+          ['엔씨소프트',  24.1],
+          ['NHN', 16.8],
+          ['컴투스',    5]
+        ]);
+
+        var options = {
+          title: '한국 게임사 매출 순위'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 1200px; height: 800px;"></div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //b2를 눌렀을때 tomcatb으로 비동기통신
+            $('#b2').click(function () {
+                $.ajax({
+                    url: 'http://localhost:8888/test.html',
+                    success: function () {
+                        alert('tomcat서버 통신 성공')
+                    },
+                    error: function () {
+                        alert('tomcat서버 통신 실패')
+                    }
+                })
+            })
+        })
+
+
+        $(function () {
+            //b1을 눌렀을 때 msn 사이트와의 비동기통신
+            $('#b1').click(function () {
+                //b1을 클릭했을때  내용씀
+                //msn.com 사이트로 비동기통신
+                //성공했을때, 연결성공!!
+                //실피했을때, 연결실패!!
+                $.ajax({
+                    url: 'http://www.msn.com',
+                    success: function () {
+                        alert('성공!')
+                    },
+                    error: function () {
+                        alert('실패!')
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="b1">msn사이트 비동기통신하기</button>
+</body>
+</html>
