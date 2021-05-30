@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+  <style>
+      h3{
+          background: pink;
+          color: aliceblue;
+      }
+      p{
+          background: bisque;
+          color: gray;
+      }
+      li{
+          background: thistle;
+          color: azure;
+      }
+  </style>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h3>1 나에 대한 소개</h3>
+  <div>
+    <p>
+    나에 대한 소개를 쓰는곳
+    </p>
+  </div>
+
+  <h3>2 나의 시간표</h3>
+  <div>
+    <p>
+    
+    </p>
+  </div>
+
+  <h3>3 내가 자주가는 사이트</h3>
+  <div>
+    <p>
+    사이트를 쓰는곳
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면나누기</title>
+    <style>
+        div{
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+    }
+    #d1{
+        border-top: 5px solid red;
+        border-bottom: 5px solid red;
+    }
+    .d2{
+        width: 250px;
+        background: yellow;
+        margin: 25px; /* 바깥쪽의 여백, 4군데 모두 */
+        padding: 20px;  /* 안쪽의 여백 */
+        border-radius: 100px 10px; /* 모서리의 번호대로 순서대로 설정 1,2,3,4*/
+    /* 패턴이 동일할 경우 1,2만 작성해도 됨.
+    1개만 쓸경우 모서리가 모두 동일해짐. */ 
+        border:  20px inset blue;
+        box-shadow: 10px 10px gray;}
+        .d3{
+            width: 250px;
+            background: mistyrose;
+            margin: 25px;
+            padding: 20px;
+            border-radius: 100px 5px;
+            border: 15px inset lightcyan;
+            box-shadow: 5px 5px rgba(159, 255, 207, 0.781);
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+    나는 첫번째 메뉴야~<br>
+    나는 두번째 메뉴야!!!
+    </div>
+    <div class="d2">
+    오늘은 비가 많이 오고<br>
+    황사도 많습니다.
+    </div>
+    <div class="d2">
+    내일은 비가 그치고<br>
+    황사도 없어질 예정입니다.
+    </div>
+    <div class="d3">
+    내일 모래에는 다시<br>
+    비가오지만, 황사나<br>
+    미세먼지는 없을 예정입니다.
+    </div>
+</body>
+</html>
